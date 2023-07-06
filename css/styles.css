@@ -986,12 +986,12 @@ img {
 
   fill: transparent;
 
-  transition: border-color var(--anim-prop), background-color var(--anim-prop),
+  transition: border var(--anim-prop), background-color var(--anim-prop),
     fill var(--anim-prop);
 }
 
 .modal-form-checkbox:checked + .modal-form-agreement-field .modal-form-box {
-  border-color: none;
+  border: none;
   background-color: var(--ocean-color);
   fill: var(--cloud-color);
 }
