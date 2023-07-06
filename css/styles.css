@@ -134,6 +134,33 @@ img {
   background-color: var(--ocean-color);
 }
 
+.label {
+  color: var(--light-slate-color);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  outline: transparent;
+  background-color: var(--dairy-color);
+  border-radius: 4px;
+  border: 1px solid var(--navy-blue-color);
+
+  transition: border-color var(--anim-prop);
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--iris-color);
+}
+
+.textarea::placeholder {
+  color: var(--navy-blue-modal-color);
+}
+
 /**
   |============================
   | Card set
@@ -607,15 +634,13 @@ img {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
   color: var(--white-color);
-  font-size: 18px;
-  line-height: 1;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
 }
 
 .footer-subscription-input::placeholder {
-  color: var(--white-color);
-  font-size: 12px;
-  line-height: 0.5;
-  letter-spacing: 0.04;
+  color: currentColor;
 }
 
 .footer-subscription-btn {
@@ -630,11 +655,18 @@ img {
 
   border: 0;
   border-radius: 4px;
-  background: var(--iris-color);
+  background-color: var(--iris-color);
 
   color: var(--white-color);
   font-weight: 500;
-  letter-spacing: 0.04;
+  letter-spacing: 0.04em;
+
+  transition: background-color var(--anim-prop);
+}
+
+.footer-subscription-btn:hover,
+.footer-subscription-btn:focus {
+  background-color: var(--ocean-color);
 }
 
 .footer-subscription-logo {
@@ -867,6 +899,8 @@ img {
 .modal-form {
 }
 
+/* Inputs */
+
 .modal-form-field {
   position: relative;
   display: block;
@@ -880,11 +914,6 @@ img {
 .modal-form-label {
   display: block;
   margin-bottom: 4px;
-
-  color: var(--light-slate-color);
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04;
 }
 
 .modal-form-input {
@@ -908,46 +937,28 @@ img {
   fill: var(--iris-color);
 }
 
+/* Comment */
+
 .modal-form-textarea {
   padding: 7px 15px;
   height: 120px;
   resize: none;
-}
 
-.input,
-.textarea {
-  width: 100%;
-  outline: transparent;
-  background-color: var(--dairy-color);
-  border-radius: 4px;
-  border: 1px solid var(--navy-blue-color);
-
-  transition: border-color var(--anim-prop);
-}
-
-.input:focus,
-.textarea:focus {
-  border-color: var(--iris-color);
-}
-
-.input::placeholder,
-.textarea::placeholder {
-  color: var(--navy-blue-modal-color);
   font-size: 12px;
   line-height: 1.17;
-  letter-spacing: 0.04;
+  letter-spacing: 0.04em;
 }
 
+/* Privacy policy agreement */
+
 .modal-form-agreement {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin-bottom: 24px;
 }
 
 .modal-form-checkbox {
-}
-
-.modal-form-label {
-  display: flex;
-  align-items: center;
 }
 
 .modal-form-box {
@@ -957,47 +968,34 @@ img {
 
   width: 16px;
   height: 16px;
-  margin-right: 8px;
 
   border-radius: 2px;
   border: 1px solid var(--navy-blue-modal-color);
+
+  transition: border-color var(--anim-prop), background-color var(--anim-prop);
 }
 
-.modal-form-checkbox:checked + .modal-form-label .modal-form-box {
+.modal-form-checkbox:checked + .modal-form-box {
   border-color: transparent;
   background-color: var(--ocean-color);
 }
 
 .modal-form-check {
-  fill: var(--dairy-color);
-}
-
-.modal-form-checkbox:checked + .modal-form-label .modal-form-check {
   fill: var(--cloud-color);
+  opacity: 0;
+
+  transition: opacity var(--anim-prop);
 }
 
-.modal-form-label.agreement {
-  margin-bottom: 0;
+.modal-form-checkbox:checked + .modal-form-box > .modal-form-check {
+  opacity: 1;
+}
+
+.modal-form-text {
+  user-select: none;
 }
 
 .modal-form-link {
   color: var(--iris-color);
-  /* text-decoration: underline; */
-  position: relative;
-}
-
-.modal-form-link::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 1px;
-
-  background-color: var(--iris-color);
-
-  position: absolute;
-  bottom: 1px;
-  left: 0;
-}
-
-.link {
+  text-decoration: underline;
 }
