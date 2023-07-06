@@ -605,16 +605,7 @@ img {
 .footer-subscription {
 }
 
-.footer-subscription-form {
-  display: flex;
-  align-items: flex-end;
-}
-
-.footer-subscription-field {
-  margin-right: 24px;
-}
-
-.footer-subscription-label {
+.footer-subscription-caption {
   display: block;
   margin-bottom: 16px;
 
@@ -622,20 +613,29 @@ img {
   font-weight: 500;
 }
 
+.footer-subscription-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.footer-subscription-field {
+}
+
 .footer-subscription-input {
   width: 264px;
   height: 40px;
-  padding: 7px 15px;
+  padding: 7px 16px;
 
   outline: transparent;
   background-color: transparent;
   border-radius: 4px;
   border: 1px solid var(--white-color);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 
   color: var(--white-color);
   font-size: 12px;
-  line-height: 2;
+  line-height: 1.5;
   letter-spacing: 0.04em;
 }
 
@@ -647,9 +647,8 @@ img {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
 
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   padding: 8px 24px;
 
@@ -670,6 +669,8 @@ img {
 }
 
 .footer-subscription-logo {
+  margin-left: 16px;
+
   fill: var(--white-color);
 }
 
@@ -902,8 +903,6 @@ img {
 /* Inputs */
 
 .modal-form-field {
-  position: relative;
-  display: block;
   margin-bottom: 8px;
 }
 
@@ -912,8 +911,11 @@ img {
 }
 
 .modal-form-label {
-  display: block;
   margin-bottom: 4px;
+}
+
+.modal-form-container {
+  position: relative;
 }
 
 .modal-form-input {
@@ -940,7 +942,7 @@ img {
 /* Comment */
 
 .modal-form-textarea {
-  padding: 7px 15px;
+  padding: 7px 16px;
   height: 120px;
   resize: none;
 

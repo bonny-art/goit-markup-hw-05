@@ -462,7 +462,7 @@
 
         <!-- Subscription form -->
         <div class="footer-subscription">
-          <span class="footer-subscription-label">Subscribe</span>
+          <p class="footer-subscription-caption">Subscribe</p>
           <form class="footer-subscription-form" name="subscription_form">
             <label class="footer-subscription-field">
               <input
@@ -494,56 +494,70 @@
         </button>
 
         <!-- Modal caption -->
-        <strong class="modal-caption">
+        <p class="modal-caption">
           Leave your contacts and we will call you back
-        </strong>
+        </p>
 
         <!-- Modal form -->
         <form class="modal-form" name="contacts_form">
-          <!-- Inputs -->
-          <label class="modal-form-field">
-            <span class="modal-form-label label">Name</span>
-            <input
-              class="modal-form-input input"
-              type="text"
-              name="user_name"
-            />
-            <svg class="modal-form-icon" width="18" height="24">
-              <use href="./images/icons.svg#user"></use>
-            </svg>
-          </label>
-          <label class="modal-form-field">
-            <span class="modal-form-label label">Phone</span>
-            <input
-              class="modal-form-input input"
-              type="tel"
-              name="user_phone"
-            />
-            <svg class="modal-form-icon" width="18" height="24">
-              <use href="./images/icons.svg#phone"></use>
-            </svg>
-          </label>
-          <label class="modal-form-field">
-            <span class="modal-form-label label">Email</span>
-            <input
-              class="modal-form-input input"
-              type="email"
-              name="user_email"
-            />
-            <svg class="modal-form-icon" width="18" height="24">
-              <use href="./images/icons.svg#email"></use>
-            </svg>
-          </label>
+          <!-- Input Name -->
+          <div class="modal-form-field">
+            <label class="modal-form-label label" for="name">Name</label>
+            <div class="modal-form-container">
+              <input
+                class="modal-form-input input"
+                type="text"
+                name="user_name"
+                id="name"
+              />
+              <svg class="modal-form-icon" width="18" height="24">
+                <use href="./images/icons.svg#user"></use>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Input phone -->
+          <div class="modal-form-field">
+            <label class="modal-form-label label" for="phone">Phone</label>
+            <div class="modal-form-container">
+              <input
+                class="modal-form-input input"
+                type="tel"
+                name="user_phone"
+                id="phone"
+              />
+              <svg class="modal-form-icon" width="18" height="24">
+                <use href="./images/icons.svg#phone"></use>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Input email -->
+          <div class="modal-form-field">
+            <label class="modal-form-label label" for="email">Email</label>
+            <div class="modal-form-container">
+              <input
+                class="modal-form-input input"
+                type="email"
+                name="user_email"
+                id="email"
+              />
+              <svg class="modal-form-icon" width="18" height="24">
+                <use href="./images/icons.svg#email"></use>
+              </svg>
+            </div>
+          </div>
 
           <!-- Comment -->
-          <label class="modal-form-field">
-            <span class="modal-form-label label">Comment</span>
+          <div class="modal-form-field">
+            <label class="modal-form-label label" for="comment">Comment</label>
             <textarea
               class="modal-form-textarea textarea"
               name="user_comment"
+              id="comment"
               placeholder="Text input"
             ></textarea>
-          </label>
+          </div>
 
           <!-- Privacy policy agreement -->
           <label class="modal-form-agreement" for="agreement">
@@ -559,7 +573,7 @@
               </svg>
             </span>
             <span class="modal-form-text label"
-              >I agreement the terms and conditions of the&#xa0;
+              >I accept the terms and conditions of the
               <a class="modal-form-link link" href="#">Privacy Policy</a>
             </span>
           </label>
