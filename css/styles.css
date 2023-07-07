@@ -965,7 +965,7 @@ img {
 }
 
 .modal-form-agreement-field {
-  display: flex;
+  display: inline-flex;
   align-items: center;
 
   user-select: none;
