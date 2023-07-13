@@ -608,7 +608,7 @@ img {
 }
 
 .footer-subscription-caption {
-  display: block;
+  /* display: block; */
   margin-bottom: 16px;
 
   color: var(--white-color);
@@ -700,8 +700,8 @@ img {
   margin: 0 auto 72px auto;
 }
 
-/* .filter-item {
-} */
+.filter-item {
+}
 
 .filter-btn {
   background-color: var(--cloud-color);
@@ -965,17 +965,15 @@ img {
 }
 
 .modal-form-agreement-field {
-  align-items: center;
-
   user-select: none;
   margin-bottom: 0;
 }
 
 .modal-form-box {
   display: inline-flex;
-
   justify-content: center;
   align-items: center;
+
   margin-right: 8px;
 
   width: 16px;
