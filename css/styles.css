@@ -646,14 +646,15 @@ img {
   border: 1px solid rgb(var(--cl-white));
   box-shadow: 0px 4px 4px 0px rgba(var(--cl-black), 0.15);
 
-  background-color: transparent;
-}
-
-.footer-subscribe-input::placeholder {
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
 
+  color: rgb(var(--cl-white));
+  background-color: transparent;
+}
+
+.footer-subscribe-input::placeholder {
   color: rgb(var(--cl-white));
 }
 
@@ -662,7 +663,7 @@ img {
   justify-content: center;
   align-items: center;
 
-  min-width: 168px;
+  min-width: 165px;
   padding: 8px 0;
 
   text-align: center;
@@ -749,8 +750,7 @@ img {
   color: rgb(var(--cl-navy-blue));
   background-color: rgb(var(--cl-cornflower));
 
-  transition: color var(--transition-hover-focus),
-    background-color var(--transition-hover-focus),
+  transition: background-color var(--transition-hover-focus),
     border var(--transition-hover-focus);
 }
 
@@ -787,14 +787,11 @@ img {
 .modal-form-field-box {
   display: flex;
   flex-direction: column;
-  gap: 4px;
 
   color: rgb(var(--cl-navy-blue));
 }
 
 .modal-form-input-box {
-  position: relative;
-
   margin-bottom: 8px;
 }
 
@@ -803,6 +800,8 @@ img {
 }
 
 .modal-form-label {
+  margin-bottom: 4px;
+
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17;
@@ -811,17 +810,26 @@ img {
   color: rgb(var(--cl-light-slate));
 }
 
+.modal-input-box {
+  position: relative;
+}
+
 .modal-form-field {
+  width: 100%;
+
   border-radius: 4px;
   border: 1px solid rgba(var(--cl-navy-blue), 0.4);
+
+  outline: transparent;
 
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
 
-  color: currentColor;
+  color: rgba(var(--cl-navy-blue), 0.4);
+  background-color: transparent;
 
-  transition: border-color var(--transition-hover-focus);
+  transition: border var(--transition-hover-focus);
 }
 
 .modal-form-field:hover,
@@ -838,7 +846,7 @@ img {
 .modal-form-textarea {
   height: 120px;
 
-  padding: 11px 16px;
+  padding: 8px 16px;
 
   resize: none;
   overflow-y: auto;
@@ -868,23 +876,34 @@ img {
   fill: rgb(var(--cl-iris));
 }
 
+.custom-checkbox-container {
+  margin-bottom: 24px;
+}
+
+.standard-checkbox:checked + .custom-checkbox .custom-checkbox-box {
+  background-color: rgb(var(--cl-ocean));
+  border: none;
+  fill: rgb(var(--cl-cloud));
+}
+
+.standard-checkbox:checked + .custom-checkbox .custom-checkbox-icon {
+  visibility: visible;
+}
+
 .custom-checkbox {
-  display: flex;
+  display: inline-flex;
   align-items: baseline;
   gap: 8px;
 
-  margin-bottom: 24px;
-
   cursor: pointer;
   user-select: none;
-}
 
-/* TODO: Як зробити, щоб фокус працював при наведенні тільки із клавіатури? */
-/* .custom-checkbox:focus-within {
-  outline: 2px solid rgb(var(--cl-black));
-  outline-offset: 4px;
-  border-radius: 4px;
-} */
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+
+  color: rgb(var(--cl-light-slate));
+}
 
 .custom-checkbox-box {
   display: flex;
@@ -895,31 +914,16 @@ img {
   border: 1px solid rgba(var(--cl-navy-blue), 0.4);
   border-radius: 2px;
 
-  transition: background-color var(--transition-hover-focus),
-    border-color var(--transition-hover-focus);
-}
+  fill: transparent;
 
-.visually-hidden:checked + .custom-checkbox-box {
-  background-color: rgb(var(--cl-ocean));
-  border-color: transparent;
+  transition: background-color var(--transition-hover-focus),
+    border var(--transition-hover-focus), fill var(--transition-hover-focus);
 }
 
 .custom-checkbox-icon {
-  fill: rgb(var(--cl-cloud));
-  visibility: hidden;
-}
-
-.visually-hidden:checked + .custom-checkbox-box .custom-checkbox-icon {
-  visibility: visible;
 }
 
 .custom-checkbox-text {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.13;
-  letter-spacing: 0.04em;
-
-  color: rgb(var(--cl-light-slate));
 }
 
 .privacy-policy-link {
