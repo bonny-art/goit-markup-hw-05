@@ -922,9 +922,6 @@ img {
 .custom-checkbox-icon {
 }
 
-.custom-checkbox-text {
-}
-
 .privacy-policy-link {
   text-decoration-line: underline;
   text-decoration-style: solid;
@@ -934,10 +931,6 @@ img {
   text-underline-position: from-font;
 
   color: rgb(var(--cl-iris));
-}
-
-.privacy-policy-link:hover {
-  text-decoration: underline;
 }
 
 .modal-form-btn {
