@@ -571,7 +571,11 @@ img {
   color: rgb(var(--cl-cloud));
 }
 
-.footer-title {
+.footer-socials {
+  margin-right: 80px;
+}
+
+.footer-socials-title {
   margin-bottom: 16px;
 
   font-weight: 500;
@@ -579,10 +583,6 @@ img {
   letter-spacing: 0.02em;
 
   color: rgb(var(--cl-white));
-}
-
-.footer-socials {
-  margin-right: 80px;
 }
 
 .footer-socials-list {
@@ -624,10 +624,21 @@ img {
   gap: 24px;
 }
 
+.footer-subscribe-lable {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
+  color: rgb(var(--cl-white));
+}
+
 .footer-subscribe-input {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  margin-top: 16px;
 
   width: 264px;
   height: 40px;
@@ -652,7 +663,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+
+  align-self: end;
 
   padding: 8px 24px;
 
@@ -665,6 +677,8 @@ img {
 }
 
 .footer-subscribe-icon {
+  margin-left: 16px;
+
   fill: currentColor;
 }
 
@@ -690,7 +704,7 @@ img {
   transition: opacity var(--transition-hover-focus);
 }
 
-.modal-overlay.modal-is-open {
+.modal-overlay.is-open {
   opacity: 1;
   pointer-events: auto;
 }
@@ -759,25 +773,11 @@ img {
 .modal-form {
 }
 
-.modal-form-field-box {
+.modal-field-label {
   display: flex;
   flex-direction: column;
   gap: 4px;
 
-  color: rgb(var(--cl-navy-blue));
-}
-
-.modal-form-input-box {
-  position: relative;
-
-  margin-bottom: 8px;
-}
-
-.modal-form-textarea-box {
-  margin-bottom: 16px;
-}
-
-.modal-form-label {
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17;
@@ -786,7 +786,19 @@ img {
   color: rgb(var(--cl-light-slate));
 }
 
+.modal-input-label {
+  position: relative;
+
+  margin-bottom: 8px;
+}
+
+.modal-textarea-label {
+  margin-bottom: 16px;
+}
+
 .modal-form-field {
+  width: 100%;
+
   border-radius: 4px;
   border: 1px solid rgba(var(--cl-navy-blue), 0.4);
 
@@ -794,7 +806,7 @@ img {
   line-height: 1.17;
   letter-spacing: 0.04em;
 
-  color: currentColor;
+  color: rgb(var(--cl-navy-blue));
 
   transition: border-color var(--transition-hover-focus);
 }
@@ -829,7 +841,7 @@ img {
 }
 
 .modal-form-icon {
-  fill: currentColor;
+  fill: rgb(var(--cl-navy-blue));
 
   position: absolute;
   bottom: 8px;
@@ -914,6 +926,8 @@ img {
 
 .modal-form-btn {
   display: block;
+
+  min-width: 165px;
   padding: 16px 32px;
   margin: 0 auto;
 }
