@@ -829,7 +829,7 @@ img {
   color: rgba(var(--cl-navy-blue), 0.4);
   background-color: transparent;
 
-  transition: border var(--transition-hover-focus);
+  transition: border-color var(--transition-hover-focus);
 }
 
 .modal-form-field:hover,
@@ -865,8 +865,9 @@ img {
   fill: currentColor;
 
   position: absolute;
-  bottom: 8px;
+  top: 50%;
   left: 16px;
+  transform: translateY(-50%);
 
   transition: fill var(--transition-hover-focus);
 }
@@ -906,7 +907,7 @@ img {
 }
 
 .custom-checkbox-box {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 16px;
