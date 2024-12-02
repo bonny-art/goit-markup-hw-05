@@ -741,8 +741,6 @@ img {
 
   width: 24px;
   height: 24px;
-  margin-bottom: 24px;
-  margin-left: auto;
 
   border-radius: 50%;
   border: 1px solid rgba(var(--cl-black), 0.1);
