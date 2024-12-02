@@ -890,10 +890,6 @@ img {
 }
 
 .custom-checkbox {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 8px;
-
   cursor: pointer;
   user-select: none;
 
@@ -910,6 +906,8 @@ img {
   align-items: center;
   width: 16px;
   height: 16px;
+  margin-right: 8px;
+
   border: 1px solid rgba(var(--cl-navy-blue), 0.4);
   border-radius: 2px;
 
